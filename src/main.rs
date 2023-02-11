@@ -12,5 +12,6 @@ async fn main() -> std::io::Result<()> {
 
     let address = format!("127.0.0.1:{}", configuration.application_port);
     let listener = TcpListener::bind(address)?;
+
     run(listener, connection_pool)?.await
 }
